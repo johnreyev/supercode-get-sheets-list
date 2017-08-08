@@ -2,12 +2,11 @@
 import json
 import requests
 
+URL = "https://sheets.googleapis.com/v4/spreadsheets/{spreadsheet_id}?&fields=sheets.properties&key={google_key}"
 
-URL = "https://sheets.googleapis.com/v4/spreadsheets/{spreadsheet_id}/values/{range_notation}?key={google_key}"
 
-
-def main(spreadsheet_id, range_notation, google_key):
-    """ Add new user to mailchimp subscription. """
+def main(spreadsheet_id, google_key):
+    """ Get spreadsheet list of sheets information. """
 
     response = {}
     response["type"] = "error"
@@ -18,7 +17,6 @@ def main(spreadsheet_id, range_notation, google_key):
         result = requests.get(
             URL.format(
                 spreadsheet_id=spreadsheet_id,
-                range_notation=range_notation,
                 google_key=google_key
             ),
             headers=headers)

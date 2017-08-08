@@ -1,6 +1,6 @@
-# Readonly Sheet API v4
+# Get Spreadsheet List of Sheets
 
-A [Supercode](http://gosupercode.com) function that reads spreadsheet via sheet api v4.
+A [Supercode](http://gosupercode.com) function that gets spreadsheet list of sheets information.
 
 ## Sample Usage
 
@@ -14,8 +14,7 @@ import supercode
 response = supercode.call(
     "super-code-function",
     "your-supercode-api-key",
-    spreadsheet_id="1RUBkhrfDT9aaYvb_jgLLQ26Mj8jkT9jOKmMF_PyL2SU ID",
-    range_notation="A:B",
+    spreadsheet_id="SPREADSHEET_ID",
     google_key="GOOGLE_KEY_HERE"
 )
 
